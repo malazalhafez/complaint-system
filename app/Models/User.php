@@ -12,8 +12,9 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
     //
-    public function tickets(){
-        return $this->hasMany(Ticket::class,'created_by', 'id' );
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class, 'created_by', 'id');
     }
 
     /**

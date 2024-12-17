@@ -19,4 +19,9 @@ class Ticket extends Model
     {
         return $this->hasMany(Comment::class, 'ticket_id', 'id');
     }
+
+    public function createdbyUser()
+    {
+        return $this->belongsTo(user::class, 'created_by', 'id');
+    }
 }
